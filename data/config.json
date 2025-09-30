@@ -1,0 +1,44 @@
+{
+  "colors": {
+    "black": ["검은색", "블랙", "black"],
+    "blue": ["파란색", "블루", "blue", "navy", "네이비"],
+    "brown": ["갈색", "브라운", "brown", "베이지", "beige"],
+    "gray": ["회색", "그레이", "gray", "grey"],
+    "green": ["초록색", "그린", "green", "민트", "mint"],
+    "orange": ["주황색", "오렌지", "orange", "코랄", "coral"],
+    "purple": ["보라색", "퍼플", "purple", "핑크", "pink"],
+    "red": ["빨간색", "레드", "red"],
+    "white": ["흰색", "화이트", "white", "아이보리", "ivory"],
+    "yellow": ["노란색", "옐로우", "yellow", "라임", "lime"]
+  },
+  "types": {
+    "top": {
+      "hoodie": ["후드티", "후디", "hoodie", "hood"],
+      "crewneckt": ["크루넥티", "크루넥", "crewneck", "티셔츠", "tshirt"],
+      "shirts": ["셔츠", "shirt", "블라우스", "blouse"],
+      "sweater": ["스웨터", "니트", "sweater", "knit"],
+      "cardigan": ["가디건", "cardigan"],
+      "coat": ["코트", "coat", "자켓", "jacket"],
+      "scrubs": ["수술복", "scrubs"],
+      "hanbok": ["한복", "hanbok"],
+      "sportsbra": ["스포츠브라", "sports bra", "sportsbra"]
+    },
+    "bottom": {
+      "jeans": ["청바지", "진", "jeans", "denim"],
+      "cargopants": ["카고바지", "cargo pants", "cargopants"],
+      "shorts": ["반바지", "숏팬츠", "shorts", "short pants"],
+      "slacks": ["슬랙스", "정장바지", "slacks", "pants"],
+      "yogapants": ["요가팬츠", "레깅스", "yogapants", "leggings"],
+      "skirt": ["치마", "스커트", "skirt"]
+    },
+    "shoes": {
+      "boots": ["부츠", "boots", "boot"],
+      "sneakers": ["스니커즈", "운동화", "sneakers", "trainers"],
+      "loafers": ["로퍼", "loafers"],
+      "flats": ["플랫슈즈", "플랫", "flats"],
+      "flipflops": ["플립플랍", "쪼리", "샌들", "flipflops", "sandals"],
+      "oxfords": ["옥스포드", "구두", "oxfords"],
+      "running": ["러닝화", "running shoes", "running"]
+    }
+  }
+}
