@@ -2,7 +2,5 @@ flask
 google-generativeai
 python-dotenv
 pillow
-flask
-google-generativeai
-pillow
-python-dotenv
+gunicorn
+gunicorn
