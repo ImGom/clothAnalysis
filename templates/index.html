@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>의류 분석 시스템</title>
     <meta charset="UTF-8">
@@ -115,7 +116,7 @@
         }
 
         .preview-container {
-            width: 100%;
+            width: 50%;
             max-width: 500px;
             min-height: 300px;
             background-color: #1a1a1a;
@@ -187,9 +188,20 @@
         }
 
         @keyframes dots {
-            0%, 20% { content: '.'; }
-            40% { content: '..'; }
-            60%, 100% { content: '...'; }
+
+            0%,
+            20% {
+                content: '.';
+            }
+
+            40% {
+                content: '..';
+            }
+
+            60%,
+            100% {
+                content: '...';
+            }
         }
 
         #resultsContainer {
@@ -263,6 +275,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -293,7 +306,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- 분석 결과 섹션 (아래쪽 전체 너비) -->
             <div class="results-section">
                 <h2>분석 결과</h2>
@@ -311,7 +324,7 @@
         const imageInput = document.getElementById('imageInput');
         const preview = document.getElementById('preview');
         const placeholder = document.getElementById('placeholder');
-        
+
         imageInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (file) {
@@ -320,31 +333,31 @@
                 placeholder.style.display = 'none';
             }
         });
-        
+
         async function analyzeImage() {
             const file = imageInput.files[0];
             if (!file) {
                 alert('이미지를 선택하세요');
                 return;
             }
-            
+
             const loading = document.getElementById('loading');
             loading.style.display = 'block';
-            
+
             const formData = new FormData();
             formData.append('image', file);
-            
+
             try {
                 const response = await fetch('/api/analyze', {
                     method: 'POST',
                     body: formData
                 });
-                
+
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.error || `HTTP ${response.status}`);
                 }
-                
+
                 const data = await response.json();
                 displayResults(data.matches);
             } catch (error) {
@@ -354,18 +367,18 @@
                 loading.style.display = 'none';
             }
         }
-        
+
         function displayResults(matches) {
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
-            
+
             const categoryLabels = {
                 'hat': '모자',
                 'top': '상의',
                 'bottom': '하의',
                 'shoes': '신발'
             };
-            
+
             if (matches.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
@@ -375,7 +388,7 @@
                 `;
                 return;
             }
-            
+
             matches.forEach(match => {
                 const card = document.createElement('div');
                 card.className = 'result-card';
@@ -390,4 +403,5 @@
         }
     </script>
 </body>
+
 </html>
